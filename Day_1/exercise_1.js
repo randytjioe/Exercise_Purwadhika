@@ -25,20 +25,30 @@ c= 180-a-b
 console.log("Sisi ketiga dari segita adalah "+c+" derajat");
 
 // 5. Write a code to get difference between dates in days.
-let date_1 = new Date("2022-12-24")
-let date_2 = new Date("2022-12-25")
-tahun_1 = date_1.getFullYear()
-tahun_2 = date_2.getFullYear()
-bulan_1 = date_1.getMonth()
-bulan_2 = date_2.getMonth()
-day_1= date_1.getDate()
-day_2= date_2.getDate()
+// Alternatif 1
+// let date_1 = new Date("2022-12-24")
+// let date_2 = new Date("2022-12-25")
+// tahun_1 = date_1.getFullYear()
+// tahun_2 = date_2.getFullYear()
+// bulan_1 = date_1.getMonth()
+// bulan_2 = date_2.getMonth()
+// day_1= date_1.getDate()
+// day_2= date_2.getDate()
 
-beda_tahun=(tahun_2-tahun_1)*365
-beda_bulan=(bulan_2-bulan_1)*30
-beda_hari = (day_2-day_1)
-result=beda_tahun+beda_bulan+beda_hari
-console.log("Beda hari nya adalah "+result+" hari");
+// beda_tahun=(tahun_2-tahun_1)*365
+// beda_bulan=(bulan_2-bulan_1)*30
+// beda_hari = (day_2-day_1)
+// result=beda_tahun+beda_bulan+beda_hari
+// console.log("Beda hari nya adalah "+result+" hari");
+
+// Alternatif 2
+let date1 = new Date("11/01/2022");
+let date2 = new Date("11/08/2022");
+
+let diffTime = date2.getTime() - date1.getTime()
+console.log(diffTime)
+console.log(date2-date1);
+let diffDays = diffTime / (1000 * 60 * 60 * 24)
 
 // 6 Write a code to convert days to years, months and days.
 // ○ Example : 400 days → 1 year, 1 month, 5 days
